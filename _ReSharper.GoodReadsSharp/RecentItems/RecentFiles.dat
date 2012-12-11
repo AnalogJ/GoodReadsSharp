@@ -1,0 +1,40 @@
+﻿<RecentFiles>
+  <RecentFiles>
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:ResponseModel/f:AddToOwnedBooks.cs" caret="1688" fromTop="37" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:Models/f:UserShelf.cs" caret="316" fromTop="12" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:Models/f:Hash.cs" caret="273" fromTop="11" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:Models/f:OwnedBook.cs" caret="0" fromTop="0" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:Models/f:Shelf.cs" caret="812" fromTop="23" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:Models/f:ShelfReview.cs" caret="0" fromTop="0" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:Auth/f:Shelf.cs" caret="284" fromTop="7" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:Models/f:Review.cs" caret="0" fromTop="0" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:ResponseModel/f:ListShelves.cs" caret="341" fromTop="13" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:Models/f:Book.cs" caret="0" fromTop="0" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:ResponseModel/f:ReviewCountsForIsbns.cs" caret="194" fromTop="8" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/f:packages.config" caret="0" fromTop="0" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:Auth/f:Events.cs" caret="0" fromTop="0" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:Auth/f:Groups.cs" caret="0" fromTop="0" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:Auth/f:OwnedBooks.cs" caret="1535" fromTop="17" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/f:GoodReadsClient.cs" caret="2099" fromTop="16" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:Auth/f:User.cs" caret="2370" fromTop="23" />
+    <File id="F90154E3-19F0-47B6-8B69-5EB0181F7A36/f:Program.cs" caret="345" fromTop="0" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:ResponseModel/f:ListOwnedBooks.cs" caret="0" fromTop="0" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:ResponseModel/f:ListBooksOnShelf.cs" caret="477" fromTop="15" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:Public/f:Author.cs" caret="156" fromTop="8" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:Public/f:Book.cs" caret="1426" fromTop="23" />
+  </RecentFiles>
+  <RecentEdits>
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:ResponseModel/f:AddToOwnedBooks.cs" caret="704" fromTop="16" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:Auth/f:OwnedBooks.cs" caret="1535" fromTop="17" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:Models/f:UserShelf.cs" caret="467" fromTop="6" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:ResponseModel/f:ListShelves.cs" caret="341" fromTop="13" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:Models/f:Shelf.cs" caret="812" fromTop="23" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:Models/f:Hash.cs" caret="271" fromTop="11" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:Models/f:ShelfReview.cs" caret="335" fromTop="12" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:ResponseModel/f:ListBooksOnShelf.cs" caret="477" fromTop="15" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:Auth/f:Shelf.cs" caret="286" fromTop="10" />
+    <File id="F90154E3-19F0-47B6-8B69-5EB0181F7A36/f:Program.cs" caret="855" fromTop="26" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:ResponseModel/f:ReviewCountsForIsbns.cs" caret="256" fromTop="11" />
+    <File id="7F756A10-2F5F-46DA-9A5C-1586449FC32E/d:Public/f:Book.cs" caret="893" fromTop="18" />
+  </RecentEdits>
+</RecentFiles>

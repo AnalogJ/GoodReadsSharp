@@ -16,10 +16,8 @@ namespace GoodReadsSharp
         /// Lists shelves for a user 
         /// </summary>
         /// <param name="page">The page.</param>
-        public void ListShelves(Int32 page = 1)
+        public ListShelves ListShelves(Int32 page = 1)
         {
-            _restClient.BaseUrl = ApiBaseUrl;
-            _restClient.Authenticator = AuthMethods();
 
             var request = new RestRequest("shelf/list.xml", Method.GET);
             request.AddParameter("user_id", _userLogin.Id);
@@ -31,13 +29,12 @@ namespace GoodReadsSharp
 
 
             var response = _restClient.Execute<ListShelves>(request);
+            return response.Data;
         }
 
         public void AddShelf(String shelfName)
         {
             shelfName = shelfName.ToLower();
-            _restClient.BaseUrl = ApiBaseUrl;
-            _restClient.Authenticator = AuthMethods();
 
             var request = new RestRequest("user_shelves.xml", Method.POST);
             request.AddParameter("user_shelf[name]", shelfName);
@@ -48,8 +45,6 @@ namespace GoodReadsSharp
         }
         public void DeleteShelf(String shelfId)
         {
-            _restClient.BaseUrl = ApiBaseUrl;
-            _restClient.Authenticator = AuthMethods();
 
             var request = new RestRequest(String.Format("user_shelves/destroy.xml?id={0}", shelfId), Method.DELETE);
 
@@ -65,8 +60,6 @@ namespace GoodReadsSharp
         public Shelf AddBookToShelf(String shelfName, String bookId)
         {
             shelfName = shelfName.ToLower();
-            _restClient.BaseUrl = ApiBaseUrl;
-            _restClient.Authenticator = AuthMethods();
 
             var request = new RestRequest("shelf/add_to_shelf.xml", Method.POST);
             request.AddParameter("name", shelfName);
@@ -79,8 +72,6 @@ namespace GoodReadsSharp
         public Hash RemoveBookFromShelf(String shelfName, String bookId)
         {
             shelfName = shelfName.ToLower();
-            _restClient.BaseUrl = ApiBaseUrl;
-            _restClient.Authenticator = AuthMethods();
 
             var request = new RestRequest("shelf/add_to_shelf.xml", Method.POST);
             request.AddParameter("name", shelfName);
@@ -97,11 +88,9 @@ namespace GoodReadsSharp
         /// </summary>
         /// <param name="shelfName">Name of the shelf.</param>
         /// <param name="page">The page.</param>
-        public void ListBooksOnShelf(String shelfName, Int32 page= 1)
+        public ListBooksOnShelf ListBooksOnShelf(String shelfName, Int32 page = 1)
         {
             shelfName = shelfName.ToLower(); //Unfortunately the review/list api is case sensitive even though none of the other shelf api's are. Just to keep it consistent we've called toLower on all other shelfName parameters. 
-            _restClient.BaseUrl = ApiBaseUrl;
-            _restClient.Authenticator = AuthMethods();
 
             var request = new RestRequest("review/list", Method.GET);
             request.AddParameter("v", "2");
@@ -114,6 +103,7 @@ namespace GoodReadsSharp
             }
 
             var response = _restClient.Execute<ListBooksOnShelf>(request);
+            return response.Data;
         }
 
         

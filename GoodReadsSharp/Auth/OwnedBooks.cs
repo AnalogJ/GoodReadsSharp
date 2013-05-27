@@ -15,8 +15,6 @@ namespace GoodReadsSharp
         /// </summary>
         public ListOwnedBooks ListOwnedBooks(Int32 page = 1)
         {
-            _restClient.BaseUrl = ApiBaseUrl;
-            _restClient.Authenticator = AuthMethods();
 
             var request = new RestRequest("owned_books/user", Method.GET);
             request.AddParameter("id", _userLogin.Id);
@@ -34,8 +32,6 @@ namespace GoodReadsSharp
 
         public AddToOwnedBooks AddToOwnedBooks(String bookId)
         {
-            _restClient.BaseUrl = ApiBaseUrl;
-            _restClient.Authenticator = AuthMethods();
 
             var request = new RestRequest("owned_books.xml", Method.POST);
 

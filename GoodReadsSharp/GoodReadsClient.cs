@@ -39,24 +39,27 @@ namespace GoodReadsSharp
 
         /// <summary>
         /// Creates an instance of the DropNetClient given an API Key/Secret and a User Token/Secret
+        /// Make sure to call AccountInfo() Method first, without the _userToken.ID field populated the api wont work. 
         /// </summary>
         /// <param name="apiKey">The Api Key to use for the Dropbox Requests</param>
         /// <param name="appSecret">The Api Secret to use for the Dropbox Requests</param>
         /// <param name="userToken">The User authentication token</param>
         /// <param name="userSecret">The Users matching secret</param>
-        public GoodReadsClient(string apiKey, string appSecret, string userToken, string userSecret)
+        public GoodReadsClient(string apiKey, string appSecret, string userToken, string userSecret) : this(apiKey, appSecret)
         {
-            _apiKey = apiKey;
-            _appsecret = appSecret;
-
-            LoadClient();
-
+            
             _userLogin = new UserLogin( userToken,  userSecret );
+            _restClient.Authenticator = AuthMethods();
+            this.AccountInfo();
+
         }
 
         private void LoadClient()
         {
-            
+            _restClient = new RestClient(ApiBaseUrl);
+            _restClientContent = new RestClient(ApiBaseUrl);
+            _restClientContent.AddHandler("*", new JsonDeserializer());
+
         }
 
         private IAuthenticator PublicMethods()
@@ -65,6 +68,7 @@ namespace GoodReadsSharp
         }
         private IAuthenticator AuthMethods()
         {
+
             return OAuth1Authenticator.ForProtectedResource(_apiKey, _appsecret, _userLogin.Token, _userLogin.Secret);
         }
 

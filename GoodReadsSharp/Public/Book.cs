@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GoodReadsSharp.Models;
 using GoodReadsSharp.ResponseModel;
 using RestSharp;
 
@@ -11,17 +12,41 @@ namespace GoodReadsSharp
     public partial class GoodReadsClient
     {
         //Not working.
-        public void BookIdForIsbn(String isbn)
+        public Book BookIdForIsbn(String isbn, out Boolean success)
         {
-            _restClient.BaseUrl = ApiBaseUrl;
-            _restClient.Authenticator = PublicMethods();
+            try
+            {
+                _restClient.BaseUrl = ApiBaseUrl;
+                _restClient.Authenticator = PublicMethods();
 
-            var request = new RestRequest("book/isbn_to_id", Method.GET);
-            request.AddParameter("isbn", isbn);
+                var request = new RestRequest("book/isbn", Method.GET);
+                request.AddParameter("isbn", isbn);
+                request.AddParameter("key", _apiKey);
+                request.AddParameter("format", "xml");
+                //_restClient.AddHandler();
+                var response = _restClient.Execute<Book>(request);
+                
 
-            var response = _restClient.Execute(request);
+                if (response.ResponseStatus == ResponseStatus.Error)
+                {
+                    success = false;
+                    return null;
+                }
+                else
+                {
+                    success = true;
+                    return response.Data;
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                success = false;
+                return null;
 
-            return;
+            }
+
+            
         }
 
 

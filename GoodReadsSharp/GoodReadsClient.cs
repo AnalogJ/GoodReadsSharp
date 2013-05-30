@@ -33,8 +33,8 @@ namespace GoodReadsSharp
         {
             _apiKey = apiKey;
             _appsecret = appSecret;
-
             LoadClient();
+            _restClient.Authenticator = PublicMethods();
         }
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace GoodReadsSharp
 
         private IAuthenticator PublicMethods()
         {
-            return null;
+            return OAuth1Authenticator.ForRequestToken(_apiKey, _appsecret);
         }
         private IAuthenticator AuthMethods()
         {

@@ -96,6 +96,7 @@ namespace GoodReadsSharp
             request.AddParameter("v", "2");
             request.AddParameter("id", _userLogin.Id);
             request.AddParameter("shelf", shelfName);
+            request.AddParameter("per_page", 40); //TODO: Hard coded 40 books per page. 
 
             if(page>1)
             {

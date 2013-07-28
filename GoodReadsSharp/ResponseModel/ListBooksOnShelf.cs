@@ -10,17 +10,15 @@ namespace GoodReadsSharp.ResponseModel
     public class ListBooksOnShelf
     {
         public Request Request { get; set; }
-        public List<ShelfReview> Reviews { get; set; }
-        public Int32 ReviewsStart { get; set; }
-        public String ReviewsEnd { get; set; }
-        public Int32 Total { get; set; }
+        public ShelfReviewList Reviews { get; set; }
 
     }
 
-    public class ShelfReviewList : List<ShelfReview>
+    public class ShelfReviewList 
     {
-        public Int32 ReviewsStart { get; set; }
-        public String ReviewsEnd { get; set; }
+        public Int32 Start { get; set; }
+        public Int32 End { get; set; }
         public Int32 Total { get; set; }
+        public List<ShelfReview> Value { get; set; }
     }
 }
